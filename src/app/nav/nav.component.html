@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <nav>
+    <ul>
+      <li>
+        <span routerLink="/"><span class="material-icons">home</span>Home</span>
+      </li>
+      <li>
+        <span routerLink="/profile"><span class="material-icons">person</span>Profile</span>
+      </li>
+      <li>
+        <span routerLink="/news"><span class="material-icons">article</span>News</span>
+      </li>
+      <li>
+        <span (click)="logOut()">
+
+        <span class="material-icons">login</span>Log out</span>
+      </li>
+    </ul>
+  </nav>
+
+</div>
+
+<router-outlet></router-outlet>
