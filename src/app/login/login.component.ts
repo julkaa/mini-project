@@ -20,8 +20,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
-      // name: new FormControl('', [Validators.required, Validators.minLength(2)]),
-      // password: new FormControl('', [ Validators.required, Validators.minLength(5)]),
+
       name: new FormControl('admin', [Validators.required, Validators.minLength(2)]),
       password: new FormControl('12345', [ Validators.required, Validators.minLength(5)])
     });
@@ -43,14 +42,11 @@ export class LoginComponent implements OnInit {
 
     if(this.name != 'admin' && this.name != ''){
       this.correctName = true;
-      console.log('ne toy name' + this.correctName);
-    } else{
-
     }
     if(this.password != '12345' && this.password != ''){
       this.correctPass = true;
-      console.log('ne toy parol' + this.correctPass);
     }
+
     this.authService.login(this.name, this.password)
       .subscribe( data => {
         console.log("Is Login Success: " + data);
